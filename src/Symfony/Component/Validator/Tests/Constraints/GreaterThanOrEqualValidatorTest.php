@@ -51,9 +51,9 @@ class GreaterThanOrEqualValidatorTest extends AbstractComparisonValidatorTestCas
     public function provideInvalidComparisons()
     {
         return array(
-            array(1, 2, '2', 'integer'),
-            array(new \DateTime('2000/01/01'), new \DateTime('2005/01/01'), '2005-01-01 00:00:00', 'DateTime'),
-            array('b', 'c', "'c'", 'string')
+            array(1, '1', 2, '2', 'integer'),
+            array(new \DateTime('2000/01/01'), '2000-01-01 00:00:00', new \DateTime('2005/01/01'), '2005-01-01 00:00:00', 'DateTime'),
+            array('b', "'b'", 'c', "'c'", 'string')
         );
     }
 }
